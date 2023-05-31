@@ -3,7 +3,7 @@ import Admin from '../models/Admin.js';
 export const getAdmins = async (req, res) => {
   let admins;
   try {
-    admins = await Admin.find();
+    admins = await Admin.find({});
   } catch (error) {
     console.log(error);
   }
