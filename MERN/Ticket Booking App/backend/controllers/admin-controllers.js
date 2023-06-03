@@ -1,4 +1,6 @@
 import Admin from '../models/Admin.js';
+import bcrypt from 'bcryptjs'; // for hashing passwords
+import jwt from 'jsonwebtoken'; // for generating tokens
 
 export const getAdmins = async (req, res) => {
   let admins;

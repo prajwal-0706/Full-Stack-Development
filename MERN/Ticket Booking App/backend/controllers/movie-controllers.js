@@ -66,6 +66,7 @@ export const getAllMovies = async (req, res) => {
 
 export const getMovieById = async (req, res) => {
   const { id } = req.body;
+  console.log(id);
   let movie;
   try {
     movie = await Movie.findById(id);

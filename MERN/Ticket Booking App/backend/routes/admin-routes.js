@@ -8,4 +8,4 @@ adminRouter.post('/login');
 adminRouter.get('/', getAdmins);
 adminRouter.get('/:id', getAdminById);
 
-export default adminRouter;
+export default adminRouter; 
