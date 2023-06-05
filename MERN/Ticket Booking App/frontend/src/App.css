@@ -3,9 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.App {
-  background: transparent url(./utils/images/background.png) no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
