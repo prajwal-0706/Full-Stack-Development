@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { AdminLogin } from '../../api';
 
 const NavBar = () => {
   return (
@@ -20,8 +21,8 @@ const NavBar = () => {
             <li>
               <Link to="/home">View</Link>
             </li>
-            <li>
-              <Link to="/home">Account</Link>
+            <li onClick={AdminLogin}>
+              <Link>Account</Link>
             </li>
           </ul>
         </div>
