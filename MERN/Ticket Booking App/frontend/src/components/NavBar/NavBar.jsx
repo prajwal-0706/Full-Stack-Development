@@ -26,7 +26,6 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar__top"></div>
     </div>
   );
 };
