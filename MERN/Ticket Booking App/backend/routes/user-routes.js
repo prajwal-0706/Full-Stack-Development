@@ -1,11 +1,16 @@
 import express from 'express';
-import { getUserById, getUsers } from '../controllers/user-controllers.js';
+import {
+  addUser,
+  getUserById,
+  getUsers,
+  loginUser,
+} from '../controllers/user-controllers.js';
 
 let userRouter = express.Router();
 
 userRouter.get('/', getUsers);
 userRouter.get('/:id', getUserById);
-userRouter.post('/signup');
-userRouter.post('/login');
+userRouter.post('/signup', addUser);
+userRouter.post('/login', loginUser);
 
 export default userRouter;
