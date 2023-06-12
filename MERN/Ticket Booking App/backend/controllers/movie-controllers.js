@@ -23,12 +23,12 @@ export const addMovie = async (req, res) => {
     req.body;
 
   if (
-    !title &&
-    title.trim === '' &&
-    !description &&
-    description.trim === '' &&
-    !posterUrl &&
-    posterUrl.trim === ''
+    title === '' ||
+    description === '' ||
+    actors === '' ||
+    releaseDate === '' ||
+    posterUrl === '' ||
+    featured === ''
   ) {
     return res.status(422).json({ meseage: 'Invlaid Inputs' });
   }

@@ -2,8 +2,8 @@ import express from 'express';
 
 const bookingRoutes = express.Router();
 
-bookingRoutes.get('/');
+bookingRoutes.get('/:id');
 bookingRoutes.post('/book');
-bookingRoutes;
+bookingRoutes.delete('/:id');
 
 export default bookingRoutes;
