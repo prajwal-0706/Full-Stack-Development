@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" Component={NavBar} />
-          <Route path="/login" Component={Forms} />
+          <Route path="/admin" Component={Forms} />
         </Routes>
       </Router>
     </div>
