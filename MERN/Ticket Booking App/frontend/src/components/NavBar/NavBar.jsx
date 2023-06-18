@@ -2,75 +2,46 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import { Button, Typography, Modal, Box } from '@mui/material';
+import { Button, Typography, Modal, Box, Stack } from '@mui/material';
+import Btn from './Btn';
+import search from '../../utils/search.svg';
+import logo from '../../utils/logo.png';
 
 const NavBar = () => {
-  const [open, setopen] = useState(false);
-
-  const styles = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 500,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-    textAlign: 'center',
-  };
-
   return (
-    <>
-      <Button
+    <div className="navbar">
+      <img src={logo} width="300px" alt="logo" className="logo" />
+      <Box
         sx={{
-          m: 5,
-          textAlign: 'center',
-          outline: 'none',
-          fontWeight: '500',
+          display: 'flex',
+          alignItems: 'flex-end',
+          width: '40%',
+          height: '30px',
         }}
-        variant="outlined"
-        onClick={() => setopen(true)}
       >
-        Sign In
-      </Button>
-      <Modal
-        open={open}
-        onClose={() => setopen(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={styles}>
-          <Typography
-            id="modal-modal-title"
-            variant="h6"
-            component="h1"
-            sx={{
-              mb: 2,
-            }}
-          >
-            Login
-          </Typography>
-          <TextField
-            sx={{
-              mb: 2,
-            }}
-            id="outlined-basic"
-            label="Email"
-            variant="outlined"
-          />
-          <TextField
-            sx={{
-              mb: 2,
-            }}
-            id="outlined-basic"
-            label="Password"
-            variant="outlined"
-          />
-          <Button variant="contained">Login</Button>
-        </Box>
-      </Modal>
-    </>
+        <img
+          style={{
+            width: '50px',
+            height: '30px',
+          }}
+          src={search}
+          alt="search"
+        />
+        <TextField
+          sx={{
+            width: '100%',
+            height: '30px',
+          }}
+          id="input-with-sx"
+          label="Search Movie"
+          variant="standard"
+        />
+      </Box>
+      <div className="btns">
+        <Btn name={'SIGN UP'} />
+        <Btn name={'LOGIN'} />
+      </div>
+    </div>
   );
 };
 
