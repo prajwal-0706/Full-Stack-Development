@@ -1,0 +1,89 @@
+.movieCard {
+  height: 230px;
+  width: 365px;
+  margin: 10px;
+  background-size: cover;
+  border-radius: 10px;
+  text-transform: uppercase;
+  position: relative;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.movieCard::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(8, 8, 8, 0.7) 0%,
+    rgba(8, 8, 8, 0.5) 10%,
+    rgba(8, 8, 8, 0.4) 30%,
+    rgba(8, 8, 8, 0.3) 60%,
+    rgba(8, 8, 8, 0) 100%
+  );
+  z-index: 1;
+}
+
+.movieCard .movieDetails {
+  position: absolute;
+  width: 100%;
+  left: 20px;
+  bottom: 20px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(65px);
+  z-index: 1;
+}
+
+.movieBtns {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.movieBtns button {
+  background-color: #fff;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 4px;
+  width: 40%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.movieCard img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.movieCard .movieDetails .movieName {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.movieCard .movieDetails .movieGenre {
+  font-size: 16px;
+}
+
+.movieCard:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.movieCard:hover .movieDetails {
+  transform: translateY(0);
+}
+
+.movieCard:hover img {
+  transform: scale(1.05);
+}
+
+.movieBtns button:hover {
+  background-color: #f5f5f5;
+}

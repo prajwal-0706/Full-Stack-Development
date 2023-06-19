@@ -10,7 +10,18 @@ import logo from '../../utils/logo.png';
 const NavBar = () => {
   return (
     <div className="navbar">
-      <img src={logo} width="300px" alt="logo" className="logo" />
+      <img
+        style={{
+          cursor: 'pointer',
+        }}
+        onClick={() => {
+          window.location.href = '/';
+        }}
+        src={logo}
+        width="300px"
+        alt="logo"
+        className="logo"
+      />
       <Box
         sx={{
           display: 'flex',

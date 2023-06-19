@@ -44,41 +44,79 @@ const Btn = ({ name }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <form>
-          <Stack sx={styles}>
-            <Typography
-              id="modal-modal-title"
-              variant="h5"
-              component="h1"
-              sx={{
-                mb: 5,
-              }}
-            >
-              Login
-            </Typography>
-            <TextField
-              required
-              sx={{
-                mb: 2,
-              }}
-              id="outlined-basic"
-              label="Email"
-              variant="outlined"
-            />
-            <TextField
-              required
-              sx={{
-                mb: 5,
-              }}
-              id="outlined-basic"
-              label="Password"
-              variant="outlined"
-            />
-            <Button type="submit" variant="contained">
-              Login
-            </Button>
-          </Stack>
-        </form>
+        {name === 'LOGIN' ? (
+          <form>
+            <Stack sx={styles}>
+              <Typography
+                id="modal-modal-title"
+                variant="h5"
+                component="h1"
+                sx={{
+                  mb: 5,
+                }}
+              >
+                {name}
+              </Typography>
+              <TextField
+                required
+                sx={{
+                  mb: 2,
+                }}
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+              />
+              <TextField
+                required
+                sx={{
+                  mb: 5,
+                }}
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+              />
+              <Button type="submit" variant="contained">
+                Login
+              </Button>
+            </Stack>
+          </form>
+        ) : (
+          <form>
+            <Stack sx={styles}>
+              <Typography
+                id="modal-modal-title"
+                variant="h5"
+                component="h1"
+                sx={{
+                  mb: 5,
+                }}
+              >
+                {name}
+              </Typography>
+              <TextField
+                required
+                sx={{
+                  mb: 2,
+                }}
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+              />
+              <TextField
+                required
+                sx={{
+                  mb: 2,
+                }}
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+              />
+              <Button type="submit" variant="contained">
+                {name}
+              </Button>
+            </Stack>
+          </form>
+        )}
       </Modal>
     </>
   );

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400;1,500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
@@ -11,6 +14,13 @@
   color: #fff;
   padding: 0.5rem 1rem;
   height: 14vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  backdrop-filter: blur(2px);
 }
 
 .css-njuh9c-MuiFormControl-root-MuiTextField-root {
