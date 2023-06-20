@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieCard.css';
 
-const MovieCard = () => {
+const MovieCard = ({ movieName, movieGenere }) => {
   return (
     <div className="movieCard">
       <img
@@ -10,8 +10,8 @@ const MovieCard = () => {
         alt="card"
       />
       <span className="movieDetails">
-        <h4 className="movieName">Zara hatke zara bachke</h4>
-        <p className="movieGenre">HINDI (U/A) Romance</p>
+        <h4 className="movieName">{movieName}</h4>
+        <p className="movieGenre">{movieGenere}</p>
         <div className="movieBtns">
           <button className="playTrailer">BOOK TICKETS</button>
           <button className="playTrailer">PLAY TRAILER</button>
