@@ -17,22 +17,6 @@ const MovieList = () => {
         movieName={'Zara hatke zara bachke'}
         movieGenere={'HINDI (U/A) Romance'}
       />
-      <MovieCard
-        movieName={'Zara hatke zara bachke'}
-        movieGenere={'HINDI (U/A) Romance'}
-      />
-      <MovieCard
-        movieName={'Zara hatke zara bachke'}
-        movieGenere={'HINDI (U/A) Romance'}
-      />
-      <MovieCard
-        movieName={'Zara hatke zara bachke'}
-        movieGenere={'HINDI (U/A) Romance'}
-      />
-      <MovieCard
-        movieName={'Zara hatke zara bachke'}
-        movieGenere={'HINDI (U/A) Romance'}
-      />
     </div>
   );
 };
