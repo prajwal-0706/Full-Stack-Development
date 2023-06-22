@@ -13,10 +13,7 @@ const MovieList = () => {
   };
   return (
     <div style={styles} className="movieList">
-      <MovieCard
-        movieName={'Zara hatke zara bachke'}
-        movieGenere={'HINDI (U/A) Romance'}
-      />
+      <MovieCard movieName={'The Flash'} movieGenere={'HINDI (U/A) Romance'} />
     </div>
   );
 };

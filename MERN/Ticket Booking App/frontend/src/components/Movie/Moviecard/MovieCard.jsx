@@ -6,7 +6,7 @@ const MovieCard = ({ movieName, movieGenere }) => {
     <div className="movieCard">
       <img
         draggable="false"
-        src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/thumb/374x226/HO00023164.jpg"
+        src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/thumb/374x226/HO00019344.jpg"
         alt="card"
       />
       <span className="movieDetails">
