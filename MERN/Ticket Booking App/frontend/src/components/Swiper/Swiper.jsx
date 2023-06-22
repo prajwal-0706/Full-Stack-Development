@@ -26,7 +26,7 @@ const SwiperGallery = () => {
     <>
       <Swiper
         style={{
-          marginTop: '14vh',
+          marginTop: '11vh',
         }}
         modules={[Navigation, Pagination, Autoplay]}
         pagination={{

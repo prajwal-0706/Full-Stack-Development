@@ -13,6 +13,7 @@ const NavBar = () => {
       <img
         style={{
           cursor: 'pointer',
+          scale: '0.8',
         }}
         onClick={() => {
           window.location.href = '/';
