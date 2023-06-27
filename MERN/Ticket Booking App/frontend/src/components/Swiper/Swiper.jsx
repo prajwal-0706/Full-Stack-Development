@@ -33,7 +33,7 @@ const SwiperGallery = () => {
           dynamicBullets: true,
         }}
         autoplay={{
-          delay: 1200,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         loop={true}
