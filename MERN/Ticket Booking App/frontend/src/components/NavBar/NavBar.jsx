@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import { Button, Typography, Modal, Box, Stack } from '@mui/material';
-import Btn from './Btn';
+import { Box } from '@mui/material';
+import Btn, { Login, Signup } from './Btn';
 import search from '../../utils/search.svg';
 import logo from '../../utils/logo.png';
 
@@ -50,8 +49,13 @@ const NavBar = () => {
         />
       </Box>
       <div className="btns">
-        <Btn name={'SIGN UP'} />
-        <Btn name={'LOGIN'} />
+        <Btn name={'LOGIN'}>
+          <Login />
+        </Btn>
+
+        <Btn name={'Sign up'}>
+          <Signup />
+        </Btn>
       </div>
     </div>
   );

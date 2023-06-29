@@ -92,9 +92,10 @@ body {
   margin: 5px 0px;
 }
 
-.form-forgot-password a {
+.form-forgot-password span {
   color: #6375f0;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .form-btns {
@@ -135,6 +136,7 @@ body {
   cursor: pointer;
   width: 18px;
   height: 18px;
+  accent-color: #6375f0;
 }
 
 .form-heading h3,
@@ -156,4 +158,22 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #8b96a0;
+}
+
+.form-info {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 14px;
+  color: #8b96a0;
+  background-color: #f0f1f1;
+  padding: 14px 10px;
+  border-radius: 7px;
+  user-select: none;
+}
+
+.form-submit:hover {
+  background-color: #77c3fd;
+  color: #fff;
 }
