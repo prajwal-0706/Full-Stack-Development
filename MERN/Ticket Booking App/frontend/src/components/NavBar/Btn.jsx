@@ -3,15 +3,9 @@ import eyeoff from '../../utils/form/eye-off.svg';
 import eyeon from '../../utils/form/eye-on.svg';
 import googleSvg from '../../utils/form/google.svg';
 import info from '../../utils/form/info.svg';
-import {
-  Button,
-  Typography,
-  Modal,
-  Box,
-  Stack,
-  TextField,
-} from '@mui/material';
+import { Button, Modal, Stack } from '@mui/material';
 import './Navbar.css';
+import { login, signup } from '../../api/auth';
 
 const styles = {
   position: 'absolute',
@@ -54,10 +48,31 @@ const Btn = ({ name, children }) => {
   );
 };
 
-export const Signup = () => {
+export const Signup = ({ hidepass, sethidepass }) => {
+  const [userDetails, setUserDetails] = useState({});
+
+  const handleChange = (e) => {
+    setUserDetails({
+      ...userDetails,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userDetails);
+    signup(userDetails)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <Stack sx={styles}>
-      <form className="form">
+      <form onSubmit={handleSubmit} className="form">
         <div className="form-heading">
           <h3>Sign up!!</h3>
           <p
@@ -71,20 +86,39 @@ export const Signup = () => {
         <div className="form-inputs">
           <div className="form-input-1">
             <p className="form-input-label">Name</p>
-            <input type="text" required placeholder="Enter your Name" />
+            <input
+              name="name"
+              type="text"
+              required
+              placeholder="Enter your Name"
+              onChange={handleChange}
+            />
           </div>
           <div className="form-input-1">
             <p className="form-input-label">Email</p>
-            <input type="text" required placeholder="Enter your Email" />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Enter your Email"
+              onChange={handleChange}
+            />
           </div>
           <div className="form-input-2">
             <p className="form-input-label">Password</p>
             <div className="input-password-section">
-              <input type="Paasword" required placeholder="Enter Password" />
+              <input
+                name="password"
+                type={hidepass ? 'password' : 'text'}
+                required
+                placeholder="Enter Password"
+                onChange={handleChange}
+              />
               <img
-                src={eyeoff}
+                src={hidepass ? eyeoff : eyeon}
                 className="toggle-password-visibility"
                 alt="eye"
+                onClick={() => sethidepass(!hidepass)}
               />
             </div>
           </div>
@@ -101,7 +135,7 @@ export const Signup = () => {
             }}
             className="form-remember"
           >
-            <input type="checkbox" id="checkbox" />
+            <input required type="checkbox" id="checkbox" />
             <label htmlFor="checkbox">I Agree to terms and conditions</label>
           </div>
         </div>
@@ -114,22 +148,42 @@ export const Signup = () => {
             <span> Sign up with Google</span>
           </button>
         </div>
-        <div className="form-sign">
+        {/* <div className="form-sign">
           <p>
             Already have an account? <a href="/new">Login</a>
           </p>
-        </div>
+        </div> */}
       </form>
     </Stack>
   );
 };
 
-export const Login = () => {
+export const Login = ({ hidepass, sethidepass }) => {
   const [password, setPassword] = useState(false);
+  const [userDetails, setUserDetails] = useState({});
+
+  const handleChange = (e) => {
+    setUserDetails({
+      ...userDetails,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userDetails);
+    login(userDetails)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return !password ? (
     <Stack sx={styles}>
-      <form className="form">
+      <form onSubmit={handleSubmit} className="form">
         <div className="form-heading">
           <h3>Welcome Back!</h3>
           <p
@@ -143,16 +197,29 @@ export const Login = () => {
         <div className="form-inputs">
           <div className="form-input-1">
             <p className="form-input-label">Email</p>
-            <input type="text" required placeholder="Enter your Email" />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Enter your Email"
+              onChange={handleChange}
+            />
           </div>
           <div className="form-input-2">
             <p className="form-input-label">Password</p>
             <div className="input-password-section">
-              <input type="Paasword" required placeholder="Enter Password" />
+              <input
+                name="password"
+                type={hidepass ? 'password' : 'text'}
+                required
+                placeholder="Enter Password"
+                onChange={handleChange}
+              />
               <img
-                src={eyeoff}
+                src={hidepass ? eyeoff : eyeon}
                 className="toggle-password-visibility"
                 alt="eye"
+                onClick={() => sethidepass(!hidepass)}
               />
             </div>
           </div>
@@ -172,12 +239,6 @@ export const Login = () => {
             <img src={googleSvg} alt="google" />
             <span> Sign in with Google</span>
           </button>
-        </div>
-        <div className="form-sign">
-          <p>
-            Don't have an account?
-            <span onClick={() => setPassword(true)}>Sign up</span>
-          </p>
         </div>
       </form>
     </Stack>

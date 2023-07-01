@@ -38,8 +38,8 @@ const SwiperGallery = () => {
         }}
         loop={true}
         slidesPerView={1}
-        onSlideChange={() => console.log('Slide Change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('Slide Change')}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

@@ -9,6 +9,7 @@
 
 body {
   background-color: #f5f6fa;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -61,6 +62,7 @@ body {
   padding: 10px 12px;
   border-radius: 7px;
   border: 1px solid #c5cacf;
+  font-size: 14px;
 }
 
 .input-password-section {

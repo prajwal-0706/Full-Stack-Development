@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import TextField from '@mui/material/TextField';
 import { Box } from '@mui/material';
@@ -7,6 +7,7 @@ import search from '../../utils/search.svg';
 import logo from '../../utils/logo.png';
 
 const NavBar = () => {
+  const [hidepass, setHidepass] = useState(true);
   return (
     <div className="navbar">
       <img
@@ -15,7 +16,7 @@ const NavBar = () => {
           scale: '0.8',
         }}
         onClick={() => {
-          window.location.href = '/';
+          window.scrollTo(0, 0);
         }}
         src={logo}
         width="300px"
@@ -50,11 +51,11 @@ const NavBar = () => {
       </Box>
       <div className="btns">
         <Btn name={'LOGIN'}>
-          <Login />
+          <Login hidepass={hidepass} sethidepass={setHidepass} />
         </Btn>
 
         <Btn name={'Sign up'}>
-          <Signup />
+          <Signup hidepass={hidepass} sethidepass={setHidepass} />
         </Btn>
       </div>
     </div>

@@ -53,7 +53,7 @@ export const addUser = async (req, res) => {
 
   const hashedPassword = bcrypt.hashSync(password);
 
-  const newUser = await new User({
+  const newUser = new User({
     name,
     email,
     password: hashedPassword,
@@ -76,7 +76,7 @@ export const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   if (email === '' || password === '') {
-    return res.status(400).json({ message: 'please fill the details' });
+    return res.status(401).json({ message: 'please fill the details' });
   }
 
   let existingUser;
