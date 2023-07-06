@@ -34,7 +34,7 @@
 }
 
 .form__container__header h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
   color: #8b302d;
 }
@@ -66,6 +66,11 @@
   color: #fff;
   font-size: 17px;
   font-weight: 400;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
+  &:hover {
+    background: #b53e3a;
+  }
 }
 
 .form__container__body__input {

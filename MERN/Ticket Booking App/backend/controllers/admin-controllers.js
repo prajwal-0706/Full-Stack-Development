@@ -34,9 +34,9 @@ export const getAdminById = async (req, res) => {
 
 export const addAdmin = async (req, res) => {
   console.log(req.body);
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
 
-  if (email === '' || password === '') {
+  if (name === '' || email === '' || password === '') {
     return res.status(401).json({ message: 'Please fill all the fields' });
   }
 
@@ -55,6 +55,7 @@ export const addAdmin = async (req, res) => {
   const hashedPassword = bcrypt.hashSync(password);
   try {
     admin = await Admin({
+      name,
       email,
       password: hashedPassword,
     });
