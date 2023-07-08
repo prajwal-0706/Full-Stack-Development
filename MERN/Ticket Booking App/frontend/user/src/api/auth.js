@@ -19,12 +19,3 @@ export const login = async (userDetails) => {
     return error.response.data.message;
   }
 };
-
-export const logout = async () => {
-  try {
-    const response = await axios.get(`${url}/user/logout`);
-    return response;
-  } catch (error) {
-    return error.response.data.message;
-  }
-};
