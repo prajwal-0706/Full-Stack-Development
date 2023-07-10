@@ -20,22 +20,3 @@ export const login = async (userDetails) => {
   }
 };
 
-export const logout = async () => {
-  try {
-    const response = await axios.get(`${url}/user/logout`);
-    return response;
-  } catch (error) {
-    return error.response.data.message;
-  }
-};
-
-export const getUser = async () => {
-  try {
-    const response = await axios.get(`${url}/user`);
-    return response;
-  } catch (error) {
-    return error.response.data.message;
-  }
-};
-
-// Path: MERN\Ticket Booking App\frontend\user\src\components\Signup.js
