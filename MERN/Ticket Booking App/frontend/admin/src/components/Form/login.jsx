@@ -12,41 +12,141 @@ const clickhandler = (toggleVisibility, setToggleVisibility) => {
 
 const Login = () => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
+
+  const [animate, setAnimate] = useState({
+    animateSignup: false,
+    animateSignIn: false,
+  });
+
   return (
-    <div className="form">
+    <>
       <ImageDesign />
-      <div className="form__container">
-        <div className="form__container__header">
-          <h1>Login</h1>
+
+      <div
+        className={`form ${
+          animate.animateSignup
+            ? 'animate-signUp'
+            : animate.animateSignIn
+            ? 'animate-signIn'
+            : ''
+        }`}
+      >
+        <div className={`form__container flexColCenter sign-up`}>
+          <div className="form__container__header">
+            <h1>Login</h1>
+          </div>
+          <div className="form__container__body">
+            <form>
+              <div className="form__container__body__input">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div className="form__container__body__input">
+                <input
+                  type={toggleVisibility ? 'text' : 'password'}
+                  placeholder="Password"
+                  name="password"
+                  id="password"
+                />
+                <img
+                  src={toggleVisibility ? eyeon : eyeoff}
+                  className="toggle-password-visibility"
+                  alt="eyeon"
+                  onClick={() =>
+                    clickhandler(toggleVisibility, setToggleVisibility)
+                  }
+                />
+              </div>
+              <div className="form__container__body__input">
+                <button type="submit">Login</button>
+              </div>
+            </form>
+            <div className="form__container__body__input">
+              <p>
+                Register as Admin ?{' '}
+                <a
+                  onClick={() => {
+                    setAnimate({
+                      animateSignup: true,
+                      animateSignIn: false,
+                    });
+                  }}
+                  href="#"
+                >
+                  Register
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="form__container__body">
-          <form>
+
+        <div className={`form__container sign-in `}>
+          <div className="form__container__header">
+            <h1>Add Admin</h1>
+          </div>
+          <div className="form__container__body">
+            <form>
+              <div className="form__container__body__input">
+                <input
+                  type="text"
+                  placeholder="Name of Admin"
+                  name="name"
+                  id="name"
+                />
+              </div>
+
+              <div className="form__container__body__input">
+                <input
+                  type="email"
+                  placeholder="Email Id "
+                  name="email"
+                  id="email"
+                />
+              </div>
+
+              <div className="form__container__body__input">
+                <input
+                  type={toggleVisibility ? 'text' : 'password'}
+                  placeholder="Password for Admin"
+                  name="password"
+                  id="password"
+                />
+                <img
+                  src={toggleVisibility ? eyeon : eyeoff}
+                  className="toggle-password-visibility"
+                  alt="eyeon"
+                  onClick={() => setToggleVisibility(!toggleVisibility)}
+                />
+              </div>
+
+              <div className="form__container__body__input">
+                <button type="submit">Add Admin</button>
+              </div>
+            </form>
             <div className="form__container__body__input">
-              <input type="email" placeholder="Email" name="email" id="email" />
+              <p>
+                Login as Admin ?{' '}
+                <a
+                  onClick={() => {
+                    setAnimate({
+                      animateSignup: false,
+                      animateSignIn: true,
+                    });
+                  }}
+                  href="#"
+                >
+                  Login
+                </a>
+              </p>
             </div>
-            <div className="form__container__body__input">
-              <input
-                type={toggleVisibility ? 'text' : 'password'}
-                placeholder="Password"
-                name="password"
-                id="password"
-              />
-              <img
-                src={toggleVisibility ? eyeon : eyeoff}
-                className="toggle-password-visibility"
-                alt="eyeon"
-                onClick={() =>
-                  clickhandler(toggleVisibility, setToggleVisibility)
-                }
-              />
-            </div>
-            <div className="form__container__body__input">
-              <button type="submit">Login</button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

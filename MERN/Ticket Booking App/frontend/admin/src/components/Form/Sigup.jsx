@@ -10,7 +10,7 @@ const Signup = () => {
   return (
     <div className="form">
       <ImageDesign />
-      <div className="form__container">
+      <di className="form__container">
         <div className="form__container__header">
           <h1>Add Admin</h1>
         </div>
@@ -54,7 +54,7 @@ const Signup = () => {
             </div>
           </form>
         </div>
-      </div>
+      </di>
     </div>
   );
 };

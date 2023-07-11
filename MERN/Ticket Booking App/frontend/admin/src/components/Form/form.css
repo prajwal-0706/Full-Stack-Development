@@ -19,9 +19,9 @@
 }
 
 .form__container {
-  /* display: flex; */
-  position: relative;
+  position: absolute;
   width: 410px;
+  height: 450px;
   z-index: 10;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.25);
@@ -94,4 +94,76 @@
 input::placeholder {
   color: #8b302d;
   font-weight: 500;
+}
+
+.flexColCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__container.sign-up {
+  transform: rotate(15deg);
+}
+
+.form.animate-signUp .form__container.sign-in {
+  transform: rotate(15deg);
+  animation: animateRotate 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.form.animate-signIn .form__container.sign-in {
+  animation: animateSignIn 1.5s ease-in-out forwards;
+}
+
+.form.animate-signIn .form__container.sign-up {
+  animation: animateRotate 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.form.animate-signUp .form__container.sign-up {
+  animation: animateSignUp 1.5s ease-in-out forwards;
+}
+
+/* Animated Keyframes */
+
+@keyframes animateSignIn {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(0) rotate(15deg);
+  }
+}
+
+@keyframes animateRotate {
+  0% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+    z-index: 12;
+  }
+}
+
+@keyframes animateSignUp {
+  0% {
+    transform: translateX(0);
+    z-index: 12;
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  100% {
+    transform: translateX(0) rotate(15deg);
+  }
 }
