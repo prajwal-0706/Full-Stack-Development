@@ -109,21 +109,21 @@ input::placeholder {
 
 .form.animate-signUp .form__container.sign-in {
   transform: rotate(15deg);
-  animation: animateRotate 0.7s ease-in-out forwards;
+  animation: animateRotate 0.2s ease-in-out forwards;
   animation-delay: 0.3s;
 }
 
 .form.animate-signIn .form__container.sign-in {
-  animation: animateSignIn 1.5s ease-in-out forwards;
+  animation: animateSignIn 1s ease-in-out forwards;
 }
 
 .form.animate-signIn .form__container.sign-up {
-  animation: animateRotate 0.7s ease-in-out forwards;
+  animation: animateRotate 0.2s ease-in-out forwards;
   animation-delay: 0.3s;
 }
 
 .form.animate-signUp .form__container.sign-up {
-  animation: animateSignUp 1.5s ease-in-out forwards;
+  animation: animateSignUp 1s ease-in-out forwards;
 }
 
 /* Animated Keyframes */

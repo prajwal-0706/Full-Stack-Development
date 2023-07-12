@@ -5,6 +5,7 @@ import img2 from '../../utlis/forms/2.png';
 import img3 from '../../utlis/forms/3.png';
 import eyeon from '../../utlis/forms/eyeon.svg';
 import eyeoff from '../../utlis/forms/eyeoff.svg';
+import { addAdmin, loginAdmin } from '../../api/auth';
 
 const clickhandler = (toggleVisibility, setToggleVisibility) => {
   setToggleVisibility(!toggleVisibility);
@@ -17,6 +18,22 @@ const Login = () => {
     animateSignup: false,
     animateSignIn: false,
   });
+
+  const [adminDetails, setAdminDetails] = useState({});
+
+  const handleChange = (e) => {
+    setAdminDetails((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(adminDetails);
+    const data = await addAdmin(adminDetails);
+    console.log(data);
+  };
 
   return (
     <>
@@ -36,13 +53,20 @@ const Login = () => {
             <h1>Login</h1>
           </div>
           <div className="form__container__body">
-            <form>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const data = await loginAdmin(adminDetails);
+                console.log(data);
+              }}
+            >
               <div className="form__container__body__input">
                 <input
                   type="email"
                   placeholder="Email"
                   name="email"
                   id="email"
+                  onChange={handleChange}
                 />
               </div>
               <div className="form__container__body__input">
@@ -51,6 +75,7 @@ const Login = () => {
                   placeholder="Password"
                   name="password"
                   id="password"
+                  onChange={handleChange}
                 />
                 <img
                   src={toggleVisibility ? eyeon : eyeoff}
@@ -89,13 +114,14 @@ const Login = () => {
             <h1>Add Admin</h1>
           </div>
           <div className="form__container__body">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form__container__body__input">
                 <input
                   type="text"
                   placeholder="Name of Admin"
                   name="name"
                   id="name"
+                  onChange={handleChange}
                 />
               </div>
 
@@ -105,6 +131,7 @@ const Login = () => {
                   placeholder="Email Id "
                   name="email"
                   id="email"
+                  onChange={handleChange}
                 />
               </div>
 
@@ -114,6 +141,7 @@ const Login = () => {
                   placeholder="Password for Admin"
                   name="password"
                   id="password"
+                  onChange={handleChange}
                 />
                 <img
                   src={toggleVisibility ? eyeon : eyeoff}
