@@ -19,3 +19,12 @@ export const loginAdmin = async (adminDetails) => {
     console.log(error.response.data.message);
   }
 };
+
+export const getAdmin = async (id) => {
+  try {
+    const { data } = await axios.get(`${url}/${id}`);
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
