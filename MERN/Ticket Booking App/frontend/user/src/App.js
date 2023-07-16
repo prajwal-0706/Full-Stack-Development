@@ -8,21 +8,23 @@ import Booking from './components/Booking/Booking';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/booking" element={<Booking />} />
-        </Routes>
-      </Router>
-    </div>
+    <>
+      <NavBar />
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/booking" element={<Booking />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 }
 
 const Home = () => {
   return (
     <>
-      <NavBar />
       <SwiperGallery />
       <MovieList />
     </>
