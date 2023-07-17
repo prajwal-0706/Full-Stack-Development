@@ -1,0 +1,57 @@
+.booking__container__header {
+  padding: 1.5rem 4rem;
+}
+
+.booking__container__header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.booking__container__header p {
+  font-size: 1rem;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #5a637a;
+}
+
+.booking__container__description {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  margin-right: 24px;
+}
+
+.booking__container__description__seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.booking__container__description__box {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.booking__container__description__box.booked {
+  background-color: #1a2c50;
+}
+
+.booking__container__description__box.unbooked {
+  background-color: #fff;
+  border: 1px solid #9da8be;
+}
+
+.booking__container__description__box.selected {
+  background-color: #118eea;
+}
+
+.booking__container__seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

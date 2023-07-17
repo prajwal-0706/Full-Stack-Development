@@ -62,21 +62,23 @@ const Login = () => {
             >
               <div className="form__container__body__input">
                 <input
+                  required
                   type="email"
-                  placeholder="Email"
                   name="email"
                   id="email"
                   onChange={handleChange}
                 />
+                <label htmlFor="email">Email</label>
               </div>
               <div className="form__container__body__input">
                 <input
+                  required
                   type={toggleVisibility ? 'text' : 'password'}
-                  placeholder="Password"
                   name="password"
                   id="password"
                   onChange={handleChange}
                 />
+                <label htmlFor="password">Password</label>
                 <img
                   src={toggleVisibility ? eyeon : eyeoff}
                   className="toggle-password-visibility"
@@ -92,7 +94,7 @@ const Login = () => {
             </form>
             <div className="form__container__body__input">
               <p>
-                Register as Admin ?{' '}
+                Register as Admin ?
                 <a
                   onClick={() => {
                     setAnimate({
@@ -117,32 +119,36 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
               <div className="form__container__body__input">
                 <input
+                  required
                   type="text"
-                  placeholder="Name of Admin"
                   name="name"
                   id="name"
                   onChange={handleChange}
                 />
+
+                <label htmlFor="name">Name of Admin</label>
               </div>
 
               <div className="form__container__body__input">
                 <input
+                  required
                   type="email"
-                  placeholder="Email Id "
                   name="email"
                   id="email"
                   onChange={handleChange}
                 />
+                <label htmlFor="email">Email Id</label>
               </div>
 
               <div className="form__container__body__input">
                 <input
+                  required
                   type={toggleVisibility ? 'text' : 'password'}
-                  placeholder="Password for Admin"
                   name="password"
                   id="password"
                   onChange={handleChange}
                 />
+                <label htmlFor="password">Password for Admin</label>
                 <img
                   src={toggleVisibility ? eyeon : eyeoff}
                   className="toggle-password-visibility"

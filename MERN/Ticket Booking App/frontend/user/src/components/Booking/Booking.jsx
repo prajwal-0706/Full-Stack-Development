@@ -1,5 +1,6 @@
 import React from 'react';
 import Seat from './Seat/Seat';
+import './Booking.css';
 
 const Booking = () => {
   return (
@@ -10,19 +11,74 @@ const Booking = () => {
       </div>
       <div className="booking__container__description">
         <div className="booking__container__description__seat">
-          <div className="booking__container__description booked"></div>
+          <div className="booking__container__description__box booked"></div>
           <p>Booked</p>
         </div>
         <div className="booking__container__description__seat">
-          <div className="booking__container__description unbooked"></div>
+          <div className="booking__container__description__box unbooked"></div>
           <p>Unbooked</p>
         </div>
         <div className="booking__container__description__seat">
-          <div className="booking__container__description selected"></div>
+          <div className="booking__container__description__box selected"></div>
           <p>Selected</p>
         </div>
       </div>
       <div className="booking__container__seats">
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
+        <Seat />
         <Seat />
         <Seat />
         <Seat />

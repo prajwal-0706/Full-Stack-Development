@@ -67,7 +67,6 @@
   font-size: 17px;
   font-weight: 400;
   cursor: pointer;
-  /* transition: all 0.3s ease-in-out; */
   &:hover {
     background: #b53e3a;
   }
@@ -76,7 +75,6 @@
 .form__container__body__input {
   position: relative;
   margin: 6px 0px 25px 0px;
-  overflow: hidden;
 }
 
 .form__container__body__input .toggle-password-visibility {
@@ -91,9 +89,34 @@
   padding-right: 40px;
 }
 
-input::placeholder {
-  color: #8b302d;
+.form__container__body__input label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  font-size: 16px;
   font-weight: 500;
+  transform: translateY(-50%);
+  color: #8b302d;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__container__body__input input:focus ~ label,
+.form__container__body__input input:valid ~ label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b302d;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.form__container__body__input p a {
+  color: #8b302d;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .flexColCenter {

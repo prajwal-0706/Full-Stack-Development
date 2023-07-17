@@ -1,0 +1,19 @@
+:root {
+  --border: #9da8be;
+  --text: #333333;
+  --selected: #118eea;
+  --booked: #1a2c50;
+  --unbooked: #fff;
+}
+
+.seatContainer {
+  width: calc((100% - 250px) / 20);
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+}
