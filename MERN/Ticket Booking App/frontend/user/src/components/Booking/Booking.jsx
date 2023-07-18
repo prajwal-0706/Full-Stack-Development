@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Seat from './Seat/Seat';
 import './Booking.css';
+import { SeatNumberContext } from '../../Context api/Seat';
 
 const Booking = () => {
+  const [seatNumber, setSeatNumber] = useContext(SeatNumberContext);
+  // const [seatNumber, setSeatNumber] = useState(undefined);
+
   return (
     <div className="booking__container">
       <div className="booking__container__header">
@@ -24,69 +28,9 @@ const Booking = () => {
         </div>
       </div>
       <div className="booking__container__seats">
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
-        <Seat />
+        {seatNumber?.map((seat, index) => (
+          <Seat key={index} seat={seat} />
+        ))}
       </div>
       <div className="booking__container_screen">Screen this way</div>
       <div className="booking__container__bill">

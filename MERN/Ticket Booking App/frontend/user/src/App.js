@@ -5,10 +5,11 @@ import NavBar from './components/Navbar/Navbar';
 import SwiperGallery from './components/Swiper/Swiper';
 import MovieList from './components/Movie/MovieList';
 import Booking from './components/Booking/Booking';
+import { SeatNumberProvider } from './Context api/Seat';
 
 function App() {
   return (
-    <>
+    <SeatNumberProvider>
       <NavBar />
       <div className="App">
         <Router>
@@ -18,7 +19,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </>
+    </SeatNumberProvider>
   );
 }
 

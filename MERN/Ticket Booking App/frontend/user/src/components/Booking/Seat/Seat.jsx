@@ -1,8 +1,8 @@
 import React from 'react';
 import './Seat.css';
 
-const Seat = () => {
-  return <div className="seatContainer">A1</div>;
+const Seat = ({ seat }) => {
+  return <div className="seatContainer">{seat.seatNo}</div>;
 };
 
 export default Seat;
