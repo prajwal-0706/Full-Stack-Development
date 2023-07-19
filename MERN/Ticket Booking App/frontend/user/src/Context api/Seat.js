@@ -6,13 +6,23 @@ export const SeatNumberProvider = ({ children }) => {
   const [SeatNumber, setSeatNumber] = useState(() => {
     const newArray = [];
 
-    for (let i = 1; i <= 200; i++) {
+    let j = 0,
+      k = 0;
+    for (let i = 0; i < 200; i++) {
+      if ((j + 1) % 20 === 0) {
+        j = 0;
+      }
+      if ((i + 1) % 20 === 0) {
+        k++;
+      }
+
       let obj = {
         id: i,
-        seatNo: `${String.fromCharCode(65 + i)} ${i}`,
+        seatNo: `${String.fromCharCode(65 + k)}${j + 1}`,
         isBooked: false,
       };
 
+      j++;
       newArray.push(obj);
     }
 
