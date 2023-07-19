@@ -49,9 +49,49 @@
 }
 
 .booking__container__seats {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+
+.booking__container__seats .style-for-row {
+  margin-right: 87px;
+}
+
+.booking__container_screen {
+  text-align: center;
+  margin-top: 70px;
+  background-color: #118eea;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.booking__container__bill {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.booking__container__bill__price {
+  text-align: center;
+}
+
+.booking__container__bill__price p {
+  color: #5a637a;
+}
+
+.booking__container__bill__submit button {
+  font-size: 17px;
+  padding: 20px 50px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1a2c50;
+  color: #ffbe00;
+  text-transform: uppercase;
 }

@@ -8,12 +8,9 @@ export const SeatNumberProvider = ({ children }) => {
 
     let j = 0,
       k = 0;
-    for (let i = 0; i < 200; i++) {
-      if ((j + 1) % 20 === 0) {
+    for (let i = 1; i <= 160; i++) {
+      if (j % 20 === 0) {
         j = 0;
-      }
-      if ((i + 1) % 20 === 0) {
-        k++;
       }
 
       let obj = {
@@ -21,7 +18,9 @@ export const SeatNumberProvider = ({ children }) => {
         seatNo: `${String.fromCharCode(65 + k)}${j + 1}`,
         isBooked: false,
       };
-
+      if (i % 20 === 0) {
+        k++;
+      }
       j++;
       newArray.push(obj);
     }

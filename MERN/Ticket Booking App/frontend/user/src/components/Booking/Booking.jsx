@@ -5,7 +5,6 @@ import { SeatNumberContext } from '../../Context api/Seat';
 
 const Booking = () => {
   const [seatNumber, setSeatNumber] = useContext(SeatNumberContext);
-  // const [seatNumber, setSeatNumber] = useState(undefined);
 
   return (
     <div className="booking__container">
@@ -28,19 +27,24 @@ const Booking = () => {
         </div>
       </div>
       <div className="booking__container__seats">
-        {seatNumber?.map((seat, index) => (
-          <Seat key={index} seat={seat} />
-        ))}
+        {seatNumber?.map((seat) => {
+          if (seat.id % 20 !== 0 && seat.id % 10 === 0) {
+            console.log(seat.id);
+            return <Seat seat={seat} split={true} />;
+          }
+
+          return <Seat seat={seat} split={false} />;
+        })}
       </div>
       <div className="booking__container_screen">Screen this way</div>
       <div className="booking__container__bill">
         <div className="booking__container__bill__price">
           <p>Price</p>
-          <p>Rs. 150</p>
+          <h1>Rs. 150</h1>
         </div>
         <div className="booking__container__bill__seats">
           <p>Seats</p>
-          <p>1</p>
+          <h1>1</h1>
         </div>
         <div className="booking__container__bill__submit">
           <button>Confirm</button>
