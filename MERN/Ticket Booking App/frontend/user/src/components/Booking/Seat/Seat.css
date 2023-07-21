@@ -16,4 +16,23 @@
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--text);
+  cursor: pointer;
+}
+
+.seatContainer.style-for-row {
+  margin-right: 87px;
+}
+
+.seatContainer.selected {
+  background-color: var(--selected);
+  color: #fff;
+}
+
+.seatContainer.booked {
+  background-color: var(--booked);
+  color: #fff;
+}
+
+.seatContainer.unbooked {
+  background-color: var(--unbooked);
 }

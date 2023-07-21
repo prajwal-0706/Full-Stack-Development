@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Seat.css';
 
 const Seat = ({ seat, split }) => {
+  const [Selected, setSelected] = useState(false);
+
+  const clickHandler = () => {
+    setSelected((prev) => !prev);
+  };
+
   return (
-    <div className={`seatContainer ${split ? 'style-for-row' : ''}`}>
+    <div
+      onClick={clickHandler}
+      className={`seatContainer ${Selected ? 'selected' : ''} ${
+        split ? 'style-for-row' : ''
+      }`}
+    >
       {seat.seatNo}
     </div>
   );
