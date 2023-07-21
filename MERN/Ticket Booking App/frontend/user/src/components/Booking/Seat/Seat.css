@@ -7,16 +7,19 @@
 }
 
 .seatContainer {
-  width: calc((100% - 250px) / 20);
   height: 50px;
-  text-align: center;
+  width: calc((100% - 250px) / 20);
+  border: 1px solid var(--border);
+  color: var(--text);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
+  text-align: center;
+
   border-radius: 5px;
-  color: var(--text);
   cursor: pointer;
+  user-select: none;
 }
 
 .seatContainer.style-for-row {
