@@ -93,7 +93,7 @@ export const loginUser = async (req, res) => {
 
   let isPasswordValid;
   try {
-    isPasswordValid = await bcrypt.compareSync(password, existingUser.password);
+    isPasswordValid = await bcrypt.compare(password, existingUser.password);
   } catch (error) {
     console.log(error);
   }
