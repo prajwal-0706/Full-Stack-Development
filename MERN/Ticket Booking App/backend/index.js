@@ -15,6 +15,7 @@ let PORT = process.env.PORT || '5000';
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }));
+
 app.use('/user', userRouter);
 app.use('/admin', adminRouter);
 app.use('/movie', movieRoutes);

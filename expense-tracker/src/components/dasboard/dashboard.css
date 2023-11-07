@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.dashboard {
+  padding: 25px 20px 20px 40px;
+}
+
+.logo--nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.right--nav {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.nav--logo--et {
+  width: 50px;
+  height: 50px;
+}
+
+.nav--logo--title {
+  margin-top: 8px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.notification {
+  padding-top: 5px;
+}
+
+.username--nav {
+  margin-top: 8px;
+  margin-left: 30px;
+}
+
+.user--details--nav {
+  display: flex;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user--profile {
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+.dasboard--main {
+  display: flex;
+  margin-top: 30px;
+}
+
+.dashboard--card--main {
+  width: 470px;
+  background-color: #ffffff;
+  float: right;
+  height: 620px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-radius: 10px;
+  padding: 20px 10px 20px 20px;
+}
+
+.dashboard--details {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.dashboard--card--details {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 0px;
+}
+
+.padding--b {
+  padding-bottom: 25px;
+}
+
+.padding--b-2 {
+  padding-bottom: 20px;
+}
+
+.image--card {
+  margin-top: 20px;
+  width: 350px;
+  margin-left: -5px;
+  text-shadow: 1px 1px black;
+}
+
+.card--details--main {
+  position: absolute;
+  margin-top: 25px;
+  width: 300px;
+  height: 145px;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: white;
+  text-shadow: 1px 0.6px rgb(0, 0, 0);
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.balance--amount {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.card--no {
+  font-size: 21px;
+  margin-top: 25px;
+  letter-spacing: 2px;
+}
+
+.card--holder--name {
+  padding-top: 6px;
+}
+
+.transaction--head {
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+.transaction--icon {
+  width: 44px;
+  font-size: 20px;
+  font-weight: 600;
+  height: 36px;
+  border-radius: 22px;
+  padding-top: 8px;
+  text-transform: uppercase;
+}
+
+.transaction--history {
+  margin-top: 15px;
+  padding: 0px 0px 20px 0px;
+  height: 42%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.transaction--history::-webkit-scrollbar {
+  display: none;
+}
+
+.transction--main {
+  padding: 5px 2px 5px 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: default;
+  border-radius: 5px;
+}
+
+.transction--main:hover {
+  background-color: white;
+}
+
+.transaction--details {
+  padding-left: 10px;
+  font-weight: 600;
+  width: 60%;
+  padding-top: 3px;
+}
+
+.transaction--date {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.transaction--amount {
+  padding-top: 3px;
+  font-weight: 600;
+}
+
+.transaction--money {
+  width: 35%;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 70%;
+  display: inline-block;
+}
+
+.ic1 {
+  margin-top: 10px;
+}
+.ic2 {
+  margin-top: 20px;
+}
+.input {
+  background-color: #cacaca;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #4072e8;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 110%;
+}
+
+.cut {
+  background-color: #f2f4f8;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #4b4b4b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #5039d0;
+}
+
+.transaction--buttons {
+  padding-top: 15px;
+  margin-left: -20px;
+}
+
+.transaction--button {
+  width: 90px;
+  height: 40px;
+  position: relative;
+  color: white;
+  border-radius: 26px;
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  border: none;
+  margin-left: 20px;
+  transition: 0.6s;
+}
+
+.transaction--debit {
+  width: 120px;
+}
+
+.transaction--button:hover {
+  scale: 1.05;
+}
+
+.s-transaction {
+  width: 250px;
+  height: 80px;
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-top: 15px;
+  margin-top: 20px;
+  display: flex;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: default;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.s-transaction:hover {
+  scale: 1.04;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 5px;
+  margin-top: -20px;
+}
+
+.s--transactions {
+  padding-top: 8px;
+  padding-left: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.dashboard--graph--main {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  height: 400px;
+}
+
+.transaction--graph {
+  width: 80%;
+}
+
+/* Loading Effect CSS */
+
+.loadingEffect {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: 40vh;
+  overflow: hidden;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000000;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.div--pop {
+  position: absolute;
+  width: 250px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: -70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.logout--btn {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 22px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.total--tran {
+  margin-top: 30px;
+  text-align: center;
+  width: 400px;
+}
+
+.total--transaction {
+  background-color: #3a65de;
+  border-radius: 100px;
+  text-align: left;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.r1 {
+  height: 160px;
+  width: 170px;
+  padding-left: 30px;
+  padding-top: 40px;
+}
+
+.r2 {
+  height: 110px;
+  width: 115px;
+  border-radius: 70px;
+  background-color: #35dd54;
+  z-index: 2;
+  text-align: right;
+  padding-right: 25px;
+  padding-top: 30px;
+  margin-left: 130px;
+  margin-top: 30px;
+}
+
+.r3 {
+  height: 95px;
+  width: 120px;
+  border-radius: 60px;
+  background-color: #d95dba;
+  z-index: 2;
+  margin-top: 110px;
+  margin-left: 60px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.amount--value {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+}
+
+@media (max-width: 1430px) {
+  .dashboard--graph--main {
+    display: block;
+  }
+  .transaction--graph .recharts-responsive-container {
+    height: 400px !important;
+  }
+  .transaction--money {
+    margin-left: 20%;
+    margin-top: 75px;
+    width: 55%;
+  }
+  .transaction--graph .recharts-responsive-container {
+    min-width: 560px !important;
+  }
+
+  .dashboard--card--main {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .dashboard {
+    padding-left: 10px;
+  }
+  .transaction--graph .recharts-responsive-container {
+    min-width: 560px !important;
+  }
+  .recharts-rectangle {
+    width: 10px !important;
+  }
+}
+
+@media (max-width: 890px) {
+  .dasboard--main {
+    flex-direction: column-reverse;
+  }
+  .dashboard--card--main {
+    margin: 0px auto;
+  }
+  .transaction--graph {
+    margin: 20px auto;
+  }
+  .transaction--money {
+    margin: 50px auto;
+  }
+  .summary {
+    margin-top: 10px;
+  }
+  .dashboard--graph--main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .transaction--graph {
+    margin-top: 200px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard--card--main {
+    width: 75%;
+  }
+  .transaction--graph {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard--details {
+    padding: 20px 0px 20px 10px;
+  }
+  .dashboard--card--main {
+    width: 90%;
+  }
+  .transaction--graph .recharts-wrapper {
+    margin-left: -20px;
+  }
+  .dashboard--graph--main {
+    margin-left: -20px;
+  }
+  .image--card {
+    width: 100%;
+  }
+  .summary {
+    margin: 10px 0px;
+    justify-content: unset;
+  }
+  .notification {
+    display: none;
+  }
+  .username--nav {
+    margin-top: 15px;
+  }
+  .transaction--money {
+    width: 90%;
+    margin-left: 30px;
+  }
+  .transaction--graph {
+    display: none;
+  }
+  .login--quote {
+    width: 96%;
+  }
+  .input-container {
+    width: 80%;
+  }
+  .s-transaction {
+    width: 300px;
+  }
+  .oauth--text {
+    margin-top: 4px;
+  }
+  .card--details--main {
+    height: 145px;
+  }
+}
