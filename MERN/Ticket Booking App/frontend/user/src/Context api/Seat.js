@@ -6,8 +6,8 @@ export const SeatNumberProvider = ({ children }) => {
   const [SeatNumber, setSeatNumber] = useState(() => {
     const newArray = [];
 
-    let j = 0,
-      k = 0;
+    let j = 0;
+    let k = 0;
     for (let i = 1; i <= 160; i++) {
       if (j % 20 === 0) {
         j = 0;
